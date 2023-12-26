@@ -33,6 +33,7 @@ Then you can define the OpenTherm hub in your configuration:
 opentherm:
   in_pin: 4
   out_pin: 5
+  master_id: 4 # default 0, baxi 4
 ```
 
 ### Usage as a thermostat
@@ -184,6 +185,12 @@ The component can report boiler status on several binary sensors. The *Status* s
 - `max_ch_setpoint_transfer_enabled`: Remote boiler parameters: CH maximum setpoint transfer enabled
 - `dhw_setpoint_rw`: Remote boiler parameters: DHW setpoint read/write
 - `max_ch_setpoint_rw`: Remote boiler parameters: CH maximum setpoint read/write
+- `service_required`:
+- `lockout_reset`:
+- `gas_fault`:
+- `low_water_pressure`:
+- `air_fault`:
+- `water_overtemp`:
 <!-- END schema_docs:binary_sensor -->
 
 ### Sensor
