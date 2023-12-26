@@ -312,7 +312,7 @@ SENSORS: Schema[SensorSchema] = Schema({
         "accuracy_decimals": 0,
         "icon": "mdi:water-boiler-alert",
         "state_class": STATE_CLASS_MEASUREMENT,
-        "message": "ASFflags",
+        "message": "ASFflagsF",
         "keep_updated": True,
         "message_data": "u8_lb",
     }),
