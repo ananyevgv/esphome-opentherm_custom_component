@@ -226,5 +226,5 @@ The boiler can also report several numerical values, which are available through
 - `max_t_set_lb`: Lower bound for adjustment of max CH setpoint (°C)
 - `t_dhw_set`: Domestic hot water temperature setpoint (°C)
 - `max_t_set`: Maximum allowable CH water setpoint (°C)
-- fault_code: does not work at the same time - `service_required, lockout_reset, gas_fault, low_water_pressure, air_fault, water_overtemp.
+- `fault_code`: does not work at the same time - `service_required, lockout_reset, gas_fault, low_water_pressure, air_fault, water_overtemp.
 <!-- END schema_docs:sensor -->
