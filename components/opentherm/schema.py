@@ -1,4 +1,4 @@
- This file contains a schema for all supported sensors, binary sensors and
+# This file contains a schema for all supported sensors, binary sensors and
 # inputs of the OpenTherm component.
 
 from typing import Dict, Generic, Tuple, TypeVar, TypedDict
