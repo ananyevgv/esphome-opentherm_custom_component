@@ -528,7 +528,7 @@ SWITCHES: Schema[SwitchSchema] = Schema({
         "message_data": "flag8_hb_4",
         "default_mode": "restore_default_off"
     }),
-    "Lock_out_Reset ": SwitchSchema({
+    "lock_out_reset": SwitchSchema({
         "description": "Boiler Lock-out  Reset",
         "message": "Command",
         "keep_updated": True,
