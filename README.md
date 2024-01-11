@@ -35,7 +35,7 @@ Then you can define the OpenTherm hub in your configuration:
 opentherm:
   in_pin: 4
   out_pin: 5
-  master_id: 4 # default 0, baxi 4
+  master_id: 4 # default 0, baxi 4, 211
 ```
 
 ### Usage as a thermostat
