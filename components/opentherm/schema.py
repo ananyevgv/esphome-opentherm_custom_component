@@ -500,13 +500,6 @@ SWITCHES: Schema[SwitchSchema] = Schema({
         "message_data": "flag8_hb_0",
         "default_mode": "restore_default_on"
     }),
-    "ch2_enable": SwitchSchema({
-        "description": "Central Heating2 enabled",
-        "message": "Status",
-        "keep_updated": True,
-        "message_data": "flag8_hb_4",
-        "default_mode": "restore_default_on"
-    }),
     "dhw_enable": SwitchSchema({
         "description": "Domestic Hot Water enabled",
         "message": "Status",
