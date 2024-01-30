@@ -134,9 +134,13 @@ The following inputs are available:
 For five status codes, switches are available to toggle them manually. The same values can be set in the hub configuration, like so:
 
 ```yaml
-opentherm:
-  ch_enable: true
-  dhw_enable: true
+- platform: opentherm
+  ch_enable: 
+  dhw_enable: 
+  cooling_enable:
+  otc_active:
+  ch2_active:
+  lock_out_reset:
 ```
 
 This can be used to set the value without the need for a switch if you'd never want to toggle it after the initial configuration. The default values for these configuration options are listed below.
