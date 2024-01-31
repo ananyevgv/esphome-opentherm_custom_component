@@ -757,4 +757,16 @@ INPUTS: Schema[InputSchema] = Schema({
         "range": (0, 127),
         "auto_min_value": { "message": "MaxCapacityMinModLevel", "message_data": "u8_lb" },
     }),
+    "otc_set_ratio": InputSchema({
+        "description": "OTC heat curve ratio",
+        "unit_of_measurement": EMPTY,
+        "step": 0.01,
+        "icon": "mdi:chart-bell-curve-cumulative",
+        "message": "Hcratio",
+        "keep_updated": True,
+        "message_data": "f88",
+        "range": (0, 40),
+        "auto_min_value": { "message": "HcratioUBHcratioLB", "message_data": "s8_lb" },
+        "auto_max_value": { "message": "HcratioUBHcratioLB", "message_data": "s8_ub" },
+    }),
 })
