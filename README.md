@@ -233,31 +233,50 @@ binary_sensor:
 The boiler can also report several numerical values, which are available through sensors. Your boiler may not support all of these values, in which case there won't be any value published to that sensor. The following sensors are available:
 
 <!-- BEGIN schema_docs:sensor -->
-- `rel_mod_level`: Relative modulation level (%)
-- `ch_pressure`: Water pressure in CH circuit (bar)
-- `dhw_flow_rate`: Water flow rate in DHW circuit (l/min)
-- `t_boiler`: Boiler water temperature (°C)
-- `t_dhw`: DHW temperature (°C)
-- `t_outside`: Outside temperature (°C)
-- `t_ret`: Return water temperature (°C)
-- `t_storage`: Solar storage temperature (°C)
-- `t_collector`: Solar collector temperature (°C)
-- `t_flow_ch2`: Flow water temperature CH2 circuit (°C)
-- `t_dhw2`: Domestic hot water temperature 2 (°C)
-- `t_exhaust`: Boiler exhaust temperature (°C)
-- `burner_starts`: Number of starts burner
-- `ch_pump_starts`: Number of starts CH pump
-- `dhw_pump_valve_starts`: Number of starts DHW pump/valve
-- `dhw_burner_starts`: Number of starts burner during DHW mode
-- `burner_operation_hours`: Number of hours that burner is in operation
-- `ch_pump_operation_hours`: Number of hours that CH pump has been running
-- `dhw_pump_valve_operation_hours`: Number of hours that DHW pump has been running or DHW valve has been opened
-- `dhw_burner_operation_hours`: Number of hours that burner is in operation during DHW mode
-- `t_dhw_set_ub`: Upper bound for adjustment of DHW setpoint (°C)
-- `t_dhw_set_lb`: Lower bound for adjustment of DHW setpoint (°C)
-- `max_t_set_ub`: Upper bound for adjustment of max CH setpoint (°C)
-- `max_t_set_lb`: Lower bound for adjustment of max CH setpoint (°C)
-- `t_dhw_set`: Domestic hot water temperature setpoint (°C)
-- `max_t_set`: Maximum allowable CH water setpoint (°C)
-- `fault_code`: 
+ ```yaml
+sensor:
+  - platform: opentherm
+    rel_mod_level: 
+      name: rel_mod_level
+    ch_pressure: 
+      name: ch_pressure
+    dhw_flow_rate: 
+      name: dhw_flow_rate
+    t_boiler: 
+      name: t_boiler
+    t_dhw: 
+      name: t_dhw
+    t_outside: 
+      name: t_outside
+    t_ret: 
+      name: t_ret
+    t_storage: 
+      name: t_storage
+    t_collector: 
+      name: t_collector
+    t_flow_ch2: 
+      name: t_flow_ch2
+    t_dhw2: 
+      name: t_dhw2
+    t_exhaust: 
+      name: t_exhaust
+    burner_starts:
+      name: burner_starts
+    ch_pump_starts: 
+      name: ch_pump_starts
+    dhw_pump_valve_starts: 
+      name: dhw_pump_valve_starts
+    dhw_burner_starts: 
+      name: dhw_burner_starts
+    burner_operation_hours: 
+      name: burner_operation_hours
+    ch_pump_operation_hours: 
+      name: ch_pump_operation_hours
+    dhw_pump_valve_operation_hours: 
+      name: dhw_pump_valve_operation_hours
+    dhw_burner_operation_hours:
+      name: dhw_burner_operation_hours
+    fault_code:
+      id: error 
+ ```
 <!-- END schema_docs:sensor -->
