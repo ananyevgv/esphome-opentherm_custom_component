@@ -316,6 +316,40 @@ SENSORS: Schema[SensorSchema] = Schema({
         "keep_updated": True,
         "message_data": "u8_lb",
     }),
+
+    "otc_hc_ratio": SensorSchema({
+        "description": "OTC heat curve ratio",
+        "unit_of_measurement": UNIT_CELSIUS,
+        "accuracy_decimals": 2,
+        "device_class": DEVICE_CLASS_TEMPERATURE,
+        "state_class": STATE_CLASS_MEASUREMENT,
+        "message": "Hcratio",
+        "keep_updated": True,
+        "message_data": "f88",
+    }),
+    "otc_ratio_upper": SensorSchema({
+        "description": "Upper bound of OTC curve",
+        "unit_of_measurement": UNIT_EMPTY,
+        "accuracy_decimals": 0,
+        "state_class": STATE_CLASS_NONE,
+        "message": "HcratioUBHcratioLB",
+        "keep_updated": False,
+        "message_data": "s8_hb",
+    }),
+    "otc_ratio_lower": SensorSchema({
+        "description": "Lower bound of OTC curve",
+        "unit_of_measurement": UNIT_EMPTY,
+        "accuracy_decimals": 0,
+        "state_class": STATE_CLASS_NONE,
+        "message": "HcratioUBHcratioLB",
+        "keep_updated": False,
+        "message_data": "s8_lb",
+    }),
+    
+
+
+
+    
 })
 
 class BinarySensorSchema(EntitySchema):
