@@ -174,29 +174,58 @@ The following switches are available:
 The component can report boiler status on several binary sensors. The *Status* sensors are updated in each message cycle, while the others are only set during initialization, as they are unlikely to change without restarting the boiler.
 
 <!-- BEGIN schema_docs:binary_sensor -->
-- `fault_indication`: Status: Fault indication
-- `ch_active`: Status: Central Heating active
-- `dhw_active`: Status: Domestic Hot Water active
-- `flame_on`: Status: Flame on
-- `cooling_active`: Status: Cooling active
-- `ch2_active`: Status: Central Heating 2 active
-- `diagnostic_indication`: Status: Diagnostic event
-- `dhw_present`: Configuration: DHW present
-- `control_type_on_off`: Configuration: Control type is on/off
-- `cooling_supported`: Configuration: Cooling supported
-- `dhw_storage_tank`: Configuration: DHW storage tank
-- `master_pump_control_allowed`: Configuration: Master pump control allowed
-- `ch2_present`: Configuration: CH2 present
-- `dhw_setpoint_transfer_enabled`: Remote boiler parameters: DHW setpoint transfer enabled
-- `max_ch_setpoint_transfer_enabled`: Remote boiler parameters: CH maximum setpoint transfer enabled
-- `dhw_setpoint_rw`: Remote boiler parameters: DHW setpoint read/write
-- `max_ch_setpoint_rw`: Remote boiler parameters: CH maximum setpoint read/write
-- `service_required`: 
-- `lockout_reset`: 
-- `gas_fault`: 
-- `low_water_pressure`: 
-- `air_fault`: 
-- `water_overtemp`: 
+
+```yaml
+
+binary_sensor:
+  - platform: opentherm
+    fault_indication:
+      name: fault_indication
+    ch_active:
+      name: ch_active
+    dhw_active: 
+      name: dhw_active
+    flame_on:
+      name: flame_on
+    cooling_active: 
+      name: cooling_active
+    ch2_active:
+      name: ch2_active
+    diagnostic_indication: 
+      name: diagnostic_indication
+    dhw_present: 
+      name: dhw_present
+    control_type_on_off: 
+      name: control_type_on_off
+    cooling_supported:
+      name: cooling_supported
+    dhw_storage_tank:
+      name: dhw_storage_tank
+    master_pump_control_allowed: 
+      name: master_pump_control_allowed
+    ch2_present:
+      name: ch2_present
+    dhw_setpoint_transfer_enabled:
+      name: dhw_setpoint_transfer_enabled
+    max_ch_setpoint_transfer_enabled:
+      name: max_ch_setpoint_transfer_enabled
+    dhw_setpoint_rw: 
+      name: dhw_setpoint_rw
+    max_ch_setpoint_rw:
+      name: max_ch_setpoint_rw
+    service_required:
+      name: service_request
+    lockout_reset: 
+      name: lockout_reset
+    gas_fault: 
+      name:  Gas/Flame Fault
+    low_water_pressure: 
+      name: low_water_pressure
+    air_fault: 
+      name: air_pressure_fault
+    water_overtemp: 
+      name: water_overtemp    
+```
 <!-- END schema_docs:binary_sensor -->
 
 ### Sensor
