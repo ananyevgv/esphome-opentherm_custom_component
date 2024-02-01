@@ -680,4 +680,13 @@ INPUTS: Schema[InputSchema] = Schema({
         "message_data": "f88",
         "range": (-40, 127),
     }),
+    "otc_ratio": InputSchema({
+        "description": "Current OTC ratio",
+        "unit_of_measurement": UNIT_EMPTY,
+        "step": 0.01,
+        "message": "Hcratio",
+        "keep_updated": True,
+        "message_data": "f88",
+        "range": (0, 40),
+    }),  
 })
