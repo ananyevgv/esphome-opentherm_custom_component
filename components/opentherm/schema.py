@@ -303,7 +303,7 @@ SENSORS: Schema[SensorSchema] = Schema({
         "state_class": STATE_CLASS_NONE,
         "message": "HcratioUBHcratioLB",
         "keep_updated": False,
-        "message_data": "s8_ub",
+        "message_data": "s8_hb",
     }),
     "otc_ratio_lb": SensorSchema({
         "description": "Lower bound of OTC curve",
