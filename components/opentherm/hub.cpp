@@ -170,9 +170,10 @@ unsigned int OpenthermHub::build_request(OpenThermMessageID request_id) {
         return ot->buildRequest(OpenThermMessageType::READ_DATA, request_id, 0);
     switch (request_id) {
         OPENTHERM_SENSOR_MESSAGE_HANDLERS(OPENTHERM_MESSAGE_READ_MESSAGE, OPENTHERM_IGNORE_2, , , )
+    }
+    switch (request_id) {
         OPENTHERM_BINARY_SENSOR_MESSAGE_HANDLERS(OPENTHERM_MESSAGE_READ_MESSAGE, OPENTHERM_IGNORE_2, , , )
     }
-
     // And if we get here, a message was requested which somehow wasn't handled.
     // This shouldn't happen due to the way the defines are configured, so we
     // log an error and just return a 0 message.
