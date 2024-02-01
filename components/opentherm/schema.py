@@ -6,6 +6,7 @@ from typing import Dict, Generic, Tuple, TypeVar, TypedDict, NotRequired
 from esphome.const import (
     UNIT_CELSIUS,
     UNIT_PERCENT,
+    UNIT_EMPTY,
     DEVICE_CLASS_COLD,
     DEVICE_CLASS_HEAT,
     DEVICE_CLASS_PRESSURE,
