@@ -346,11 +346,28 @@ SENSORS: Schema[SensorSchema] = Schema({
         "keep_updated": False,
         "message_data": "s8_lb",
     }),
-    
+    "max_capacity": SensorSchema({
+        "description": "Maximum boiler capacity (KW)",
+        "unit_of_measurement": UNIT_KILOWATT,
+        "accuracy_decimals": 0,
+        "state_class": STATE_CLASS_MEASUREMENT,
+        "disabled_by_default": True,
+        "message": "MaxCapacityMinModLevel",
+        "keep_updated": False,
+        "message_data": "u8_hb",
+    }),
+    "min_mod_level": SensorSchema({
+        "description": "Minimum modulation level",
+        "unit_of_measurement": UNIT_PERCENT,
+        "accuracy_decimals": 0,
+        "icon": "mdi:percent",
+        "disabled_by_default": True,
+        "state_class": STATE_CLASS_MEASUREMENT,
+        "message": "MaxCapacityMinModLevel",
+        "keep_updated": False,
+        "message_data": "u8_lb",
+    }),    
 
-
-
-    
 })
 
 class BinarySensorSchema(EntitySchema):
